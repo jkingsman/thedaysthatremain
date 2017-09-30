@@ -38,6 +38,10 @@
         #lifeContainer {
             line-height: 15px;
         }
+
+        #footnote {
+            font-size: smaller;
+        }
     </style>
 </head>
 
@@ -45,15 +49,17 @@
     <div class="container">
         <h4>the days that remain</h4>
 
-        <h3 id="input">i'm a <input id="age" type="number" min="0" max="118" value="22" onkeypress="redrawLife()" onchange="redrawLife()"/> year old
+        <h3 id="input">i'm a <input id="age" type="number" min="0" max="118" value="22" onkeyup="redrawLife()" onchange="redrawLife()"/> year old
             <select id="sex" onchange="redrawLife()">
                 <option value="male" selected>male</option>
                 <option value="female">female</option>
             </select>
         </h3>
         <hr />
-        <h3><span id="percentage"></span>% of your life has gone. You have, on average, this many weeks until you die:</h3>
+        <h3><span id="percentage"></span>% of your life has gone. You have, on average, this many weeks left:</h3>
         <div id="lifeContainer"></div>
+        <br /><br />
+        <span id="footnote">Data drawn from <a href="https://www.ssa.gov/oact/STATS/table4c6.html">U.S. Actuarial Tables</a>, for which data was only available for male and female.</span>
     </div>
 
     <script type="text/javascript">
